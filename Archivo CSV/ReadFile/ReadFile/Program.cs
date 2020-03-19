@@ -11,19 +11,15 @@ namespace ReadFile
     {
         static void Main(string[] args)
         {
-            var path = @"C:\vial.csv"; 
-            using (StreamReader file = new StreamReader(path))
-            {
-                int counter = 0;
-                string ln;
+            string[] lineas = File.ReadAllLines("C:/vial.csv");
 
-                while ((ln = file.ReadLine()) != null)
-                {
-                    Console.WriteLine(ln);
-                    counter++;
-                }
-                file.Close();
+            foreach (var linea in lineas)
+            {
+                var valores = linea.Split(',');
+                ArchivoCsv iteam = new ArchivoCsv(valores[0], valores[1], valores[2], valores[3], valores[4]);
+                iteam.imprimir();
                 Console.ReadLine();
+              
             }
         }
     }
