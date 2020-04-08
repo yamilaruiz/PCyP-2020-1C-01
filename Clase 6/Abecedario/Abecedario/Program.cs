@@ -52,4 +52,50 @@ namespace Abecedario
         }
 
     }
+
+    /*class Program
+    {
+
+        static void Main(string[] args)
+        {
+
+                char letra = 'a';
+                Thread p1;
+                p1 = new Thread(LeerAbecedario);
+                p1.Start();
+
+
+            while (letra <= 'z')
+            {
+                if ((letra % 2) == 0)
+                {
+                    Console.WriteLine(letra + " 1");
+                }
+                letra++;
+                Thread.Sleep(11);
+            }
+                Console.ReadKey();
+
+         }
+
+            public static void LeerAbecedario()
+            {
+                char letra = 'a';
+
+                while (letra <= 'z')
+                {
+
+                    if ((letra % 2) != 0) {
+                       Console.WriteLine(letra + " 2");
+                    }
+
+                    letra++;
+                    Thread.Sleep(10);
+                }
+
+
+            }
+
+	}*/
 }
+ 
